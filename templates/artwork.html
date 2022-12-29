@@ -1,0 +1,448 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artwork | PVK Lace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include All CSS -->
+    <link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/font-awesome.min.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/owl.carousel.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/owl.theme.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/owl.transitions.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/magnific-popup.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/jquery.bxslider.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/settings.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/preset.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/animate.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/responsive.css" %}'/>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href='{% static "assets/images/logo.png"  %}'>
+    <!-- Favicon Icon -->
+    <style>
+        p{
+           margin-top: 26px !important;
+
+        }
+        div.ex3 {
+          height: 100%;
+          overflow: auto;
+        }
+        .menu_btn_logo
+        {
+            position : absolute;
+            top : 0px;
+        }
+        .image_Set
+        {
+            position : relative;
+           bottom : 21px;
+        }
+        .gallery__previews
+		{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-top: 2rem;
+		}
+		.gallery__previews img
+		{
+			width: 9rem !important;
+			height: 7rem;
+			object-fit: cover;
+			border-radius: 4px;
+			margin: 0.5rem;
+			cursor: pointer;
+		}
+		.gallery__main
+		{
+			width: 45rem;
+			height: 30rem;
+			margin: 10px auto;
+		}
+		.gallery__main img
+		{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 8px;
+			box-shadow: 0px 10px 20px rgba(0,0,0,0.19),
+						0px 6px 6px rgba(0,0,0,0.23);
+		}
+        @media only screen and (max-width: 750px) {
+     .gallery__main {
+        width: 26rem;
+        }
+    }
+
+    </style>
+    <!--[if lt IE 9]>
+    <script src='{% static "js/html5shiv.js" %}'></script>
+    <![endif]-->
+
+</head>
+<body>
+<!-- ===================== Loader section ======================= -->
+<div class="loaderWrap">
+    <div id="loader">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- ===================== Navigation section ======================= -->
+<div class="leftMenu overlay-contentpush">
+    <nav class="mainNav">
+        <div class="menuHead">
+            <div class="logoImg">
+                <a href='{% url "index" %}'><img src='{% static "assets/images/logo.png"  %}' alt=""></a>
+            </div>
+            <a href="#" class="crossButton">
+                <img src='{% static "images/close.png" %}' alt="">
+            </a>
+        </div>
+        <div class="mainMenu">
+            <ul>
+                <li class="menu">
+                    <a href='{% url "index" %}'>HOME</a>
+                </li>
+                <li class="menu">
+                    <a href='{% url "about" %}'>ABOUT</a>
+                </li>
+                <li class="menu">
+                    <a href='{% url "artwork" %}'>ART WORK</a>
+                </li>
+                <li class="menu">
+                    <a href='{% url "contact" %}'>CONTACT</a>
+
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+</div>
+<!-- ===================== Header section ======================= -->
+<div class="leftEffect">
+    <header class="headerAreaEight">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 text-left">
+                    <div class="logoArea pull-left">
+                        <div class="logoImg pull-left">
+                            <a href='{% url "index" %}'><img src='{% static "assets/images/logo.png"  %}'
+                                                             class="image_Set" alt=""></a>
+                            <a href="#" class="menuBtn pull-left menu_btn_logo" id="leftTrigger">
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+
+                        <span></span>
+                        <span></span>
+                        </a>
+                    </div>
+                    <div class="subSocial pull-right">
+                        <div class="searchSubscribe pull-left">
+                            <!--                            <a class="search" href="#"><i class="fa fa-search"></i></a>-->
+                            <a class="subscribe" href='{% url "contact" %}'><img src='{% static "images/mail.png" %}'
+                                                                                 alt=""><span>GET INTOUCH</span></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===================== Banner section ======================= -->
+    <section class="artBannerArea">
+        <div class="artAbout pull-left">
+            <h1>Art <br>Work</h1>
+            <p>DESIGN &<br>ART DIRECTION</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-8 col-lg-offset-1 col-xs-12">
+                    <div class="artWorkCont">
+                        <h4>
+                            OUR MISSION IS TO HARNESS OUR CREATIVITY
+                            INTO A VIABLE SOLUTION.CREATED WITH COMFORT IN MIND
+
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Morbi vel nulla sapien. Class aptent tacitiaptent taciti
+                            sociosqu ad lit himenaeos. Suspendisse massa urna, luctus
+                            ut vestibulum necs et, vulputate quis urna. Donec at commodo
+                            erat. nisl ac lobortis pulvinar, augue est vulputate felis,
+                            vel pulvinar ex eros sed est.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fakeDiv"></div>
+        <div class="clearfix"></div>
+    </section>
+    <!-- ===================== Gallery section ======================= -->
+    <section class="art4WorkArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12 text-left">
+                    <ul id="filter" class="gallFilter">
+                        <li id="all" data-group="all">All</li>
+                        {% for item in category %}
+                        <li data-group="{{ item.category_name }}" id="{{ item.category_name }}">{{ item.category_name }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="grid">
+
+                    {% for item in product %}
+                    <div class="col-sm-4 col-xs-12 galItem" data-groups='["{{ item.category }}"]'>
+                        <div class="artImg">
+                            <img src='/media/{{ item.product_image }}' alt="">
+                            <div class="art4WorkHover">
+                                <h5><a href="#">{{ item.product_name }}</a></h5>
+                                <p>{{ item.category }}</p>
+                                <p>{{ item.product_description }}</p>
+                                <button type="button"
+                                        onclick="get_info('/media/{{ item.product_image_1 }}','{{ item.id }}','{{ item.product_name }}','{{ item.product_description }}');"
+                                        class="btn btn-danger"><img src='{% static "images/artwork4/arrow.png" %}'>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Footer section ======================= -->
+    <div class="clearfix"></div>
+    <footer class="footerAreaTwo footer6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 text-left wow fadeInUp" data-wow-duration="700ms"
+                     data-wow-delay="300ms">
+                    <div class="contactInfoTwo">
+                        <div class="logoImg">
+                            <a href='{% url "index" %}'>
+                                <img src='{% static "assets/images/logo.png"  %}' alt="">
+                            </a>
+                        </div>
+                        <address>48-49 GNARAYAN INDUSTRIAL ESTATE,NEAR TORRENT POWER STATION, ANJANA BRIDGE, DUMBHAL,
+                            SURAT, GUJARAT 395002</p>
+                            <span><a href="tel:+919825262055"> Tel. 098252 62055</a></span>
+                            <span>
+                                <a href = "mailto: info@pvklace.com">Email. info@pvklace.com</a>
+                            </span>
+                        </address>
+
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 text-left wow fadeInUp" data-wow-duration="700ms"
+                     data-wow-delay="350ms">
+                    <div class="footerMenuArea">
+                        <h4>USERFUL LINK</h4>
+                        <ul>
+                            <li><a href='{% url "about" %}'>ABOUT US</a></li>
+                            <li><a href='{% url "artwork" %}'>ART WORK</a></li>
+                            <li><a href='{% url "contact" %}'>CONTACT</a></li>
+                            <li><a href=#>360° Experience</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-8 col-xs-12 text-left wow fadeInUp" data-wow-duration="700ms"
+                     data-wow-delay="400ms">
+                    <div class="instaGramArea">
+                        <p class="copyText text-right">© COPYRIGHT 2020. WEBSITE DEVELOP BY <a
+                                href="https://advertising.guru/">ADVERTISING GURU</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="clearfix"></div>
+</div>
+<div class="modal ex3 fade cartModal in" id="inquiryModal" tabindex="-1" role="dialog"
+     style="display: none; padding-right: 16px;">
+    <div class="modal-dialog" role="document">
+        <div style="border:1px solid black;width:100%;height:100%;overflow:auto" class="modal-content text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img
+                    alt="" src="/static/images/close.png"></button>
+            <input type="hidden" id="id">
+            <h3 id="name1"></h3>
+
+
+
+            <div class="image_galary">
+
+            </div>
+
+
+
+
+
+
+            <p id="desc" ></p>
+            <div onclick="inquiry();" class="button_div">
+                <a class="defaultLink background" href="#">
+                    <span>Inquiry</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="modal fade cartModal in" id="inquiryModalDone" tabindex="-1" role="dialog"
+     style="display: none; padding-right: 16px;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img
+                    alt="" src="/static/images/close.png"></button>
+
+            <div class="col-sm-12 col-xs-12 margin_Set">
+                <div class="mailForm wow fadeInUp animated" data-wow-duration="700ms"
+                     data-wow-delay="300ms"
+                     style="visibility: visible; animation-duration: 700ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                    <h2>INQUIRY FORM</h2>
+                    <form id="inquiryForm" action="{% url 'add_inquiry' %}" method="post" class="conForm format_Set">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Name" class="required"
+                               name="name" id="name">
+                        <input type="email" placeholder="Email" class="required"
+                               name="email" id="email">
+                        <input type="contact" placeholder="Contact" class="required"
+                               name="contact" id="contact">
+                        <input type="hidden" placeholder="Item Name" class="required"
+                               name="item_name" id="item_name">
+                        <div class="button_div">
+                            <a onclick="inquiryForm();" type="submit" class="defaultLink background">
+                                <span>Submit</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- Back To Top -->
+<a id="backtotop" href="#"><img src='{% static "images/backto.png" %}' alt="Back to top"></a>
+
+<!-- Include All JS -->
+<script type="text/javascript" src='{% static "js/jquery.js" %}'></script>
+<script type="text/javascript" src='{% static "js/modernizr.custom.js" %}'></script>
+<script type="text/javascript" src='{% static "js/bootstrap.js" %}'></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src='{% static "js/gmaps.js" %}'></script>
+<script type="text/javascript" src='{% static "js/appear.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.magnific-popup.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/mixer.js" %}'></script>
+<script type="text/javascript" src='{% static "js/wow.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/owl.carousel.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.themepunch.tools.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.themepunch.revolution.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/classie.js" %}'></script>
+<script type="text/javascript" src='{% static "js/demo8.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.bxslider.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.shuffle.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/theme.js" %}'></script>
+<script>
+
+    $(function(){
+        var $grid = $('#grid');
+        $grid.shuffle({
+            itemSelector: '.galItem' // the selector for the items in the grid
+        });
+        if( '{{ dat }}' == ""){
+            $("#all").addClass("active");
+        }
+        else{
+            $('#filter li').removeClass('active');
+            $("#{{ dat }}").addClass('active');
+
+            var groupName = $("#{{ dat }}").attr('data-group');
+
+            $grid.shuffle('shuffle', groupName);
+        }
+
+    });
+    function get_info(image,id,name,dec){
+        $('.image_galary').empty();
+        document.getElementById('id').value = id;
+        document.getElementById('name1').innerHTML = name;
+        document.getElementById('desc').innerHTML = dec;
+        $.ajax({
+            url: '/get_product_image/',
+            data: {
+                'id':id,
+            },
+            dataType: 'json',
+                success: function (data) {
+                    html='';
+                    for(i=0;i<data.data.length;i++){
+                        if(i==0){
+                            html = html + '<div class="gallery__main">\
+                                        <img src="/media/'+ data.data[i] +'" id="main" alt="">\
+                                    </div>\
+                                    <div class="gallery__previews">';
+
+                        }
+                        html = html + '<img src="/media/'+ data.data[i] +'" onclick="changeImage(this.src)" alt="">';
+                    }
+                    html = html + '</div>';
+                    $('.image_galary').append(html);
+                }
+        });
+
+        $('#inquiryModal').modal('show');
+    }
+    function inquiry(){
+        document.getElementById('item_name').value = document.getElementById('id').value;
+        $('#inquiryModalDone').modal('show');
+    }
+    if( '{{request.session.add}}' == 1 ){
+        alert("Inquiry saved Successfully");
+        $.ajax({
+            url: '/add_session/',
+        });
+    }
+    function inquiryForm(){
+        name = document.getElementById('name').value;
+        email = document.getElementById('email').value;
+        contact = document.getElementById('contact').value;
+        var phoneno = /^\d{10}$/;
+        if(!name || !email || !contact){
+            alert("Please fill all the field...");
+        }
+        else if(!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))){
+            alert('Enter Valid Email address');
+        }
+        else if(!contact.match(phoneno)){
+            alert('Enter Valid Phone number');
+        }
+        else{
+            document.getElementById('inquiryForm').submit();
+        }
+    }
+
+
+</script>
+<script>
+	const changeImage = src =>	{
+		document.getElementById('main').src = src
+	}
+</script>
+</body>
+</html>

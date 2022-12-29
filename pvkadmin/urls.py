@@ -1,0 +1,43 @@
+from django.urls import path
+from django.views.generic import TemplateView
+
+from pvkadmin import views
+
+urlpatterns = [
+    path('', views.admin_login, name="admin-login"),
+    path('dashboard/', views.admin_index, name='admin-index'),
+    path('about/', views.admin_about_banner, name='admin-about'),
+    path('category/', views.admin_category, name='admin-category'),
+    path('home_banner/', views.admin_home_banner, name='admin-home-banner'),
+    path('product/', views.admin_product, name='admin-product'),
+    path('team/', views.admin_team, name='admin-team'),
+    path('logout/', views.admin_logout, name='admin-logout'),
+    path('add_category/', views.add_category, name='add_category'),
+    path('add_session/', views.add_session, name='add_session'),
+    path('delete_data_session/', views.delete_data_session, name='delete_data_session'),
+    path('update_session/', views.update_session, name='update_session'),
+    path('get_category_data/', views.get_category_data, name='get_category_data'),
+    path('update_category/', views.update_category, name='update_category'),
+    path('category_status/', views.category_status, name='category_status'),
+    path('add_product/', views.add_product, name='add_product'),
+    path('get_product_data/', views.get_product_data, name='get_product_data'),
+    path('update_product/', views.update_product, name='update_product'),
+    path('product_status/', views.product_status, name='product_status'),
+    path('update_home/', views.update_home, name='update_home'),
+    path('add_team/', views.add_team, name='add_team'),
+    path('get_team_data/', views.get_team_data, name='get_team_data'),
+    path('update_team/', views.update_team, name='update_team'),
+    path('team_status/', views.team_status, name='team_status'),
+    path('team_delete/', views.team_delete, name='team_delete'),
+    path('product_delete/', views.product_delete, name='product_delete'),
+    path('category_delete/', views.category_delete, name='category_delete'),
+    path('get_info_inquiry/', views.get_info_inquiry, name='get_info_inquiry'),
+    path('update_inquiry/', views.update_inquiry, name='update_inquiry'),
+    path('update_about_image/', views.update_about_image, name='update_about_image'),
+    path('add_about_image/', views.add_about_image, name='add_about_image'),
+    path('delete_about_image/', views.delete_about_image, name='delete_about_image'),
+    path('get_about_image/', views.get_about_image, name='get_about_image'),
+    path('contact_status/', views.contact_status, name='contact_status'),
+    path('forgot_password/', views.forgot_password, name='forgot_password'),
+    path('change_password/', views.change_password, name='change_password'),
+]

@@ -1,0 +1,427 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Category | PVK Lace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium category laces" name="description" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href='{% static "assets/images/favicon.ico" %}'>
+
+
+
+    <!-- Bootstrap Css -->
+    <link href='{% static "assets/css/bootstrap.min.css" %}' id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href='{% static "assets/css/icons.min.css" %}' rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href='{% static "assets/css/app.min.css" %}' id="app-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body data-topbar="light" data-layout="horizontal">
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="container-fluid">
+                    <div class="float-left">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href='{% url "admin-index" %}' class="logo logo-dark">
+                                <span class="logo-lg">
+                                    <img src='{% static "assets/images/logo.png" %}' alt="logo" height="50">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="float-right">
+
+                        <!-- App Search-->
+                        <form class="app-search d-none d-lg-inline-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="fa fa-search"></span>
+                            </div>
+                        </form>
+
+                        <div class="dropdown d-none d-lg-inline-block">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                data-toggle="fullscreen">
+                                <i class="mdi mdi-fullscreen font-size-24"></i>
+                            </button>
+                        </div>
+
+                        <div class="dropdown d-inline-block d-lg-none ml-2">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                id="page-header-search-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="mdi mdi-magnify"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                                aria-labelledby="page-header-search-dropdown">
+
+                                <form class="p-3">
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ..."
+                                                aria-label="Recipient's username">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit"><i
+                                                        class="mdi mdi-magnify"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src='{% static "assets/images/logo.png" %}'
+                                    alt="Header Avatar">
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- item-->
+                                <a class="dropdown-item d-block" href="{% url 'forgot_password' %}"><i
+                                    class="mdi mdi-settings font-size-17 text-muted align-middle mr-1"></i>
+                                Change Password</a>
+                                <a class="dropdown-item text-danger" href='{% url "admin-logout" %}'><i
+                                        class="mdi mdi-power font-size-17 text-muted align-middle mr-1 text-danger"></i>
+                                    Logout</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-navigation">
+                <div class="page-title-content">
+                    <div class="container-fluid">
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="page-title-box">
+                                    <h4>PVK Lace</h4>
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href='{% url "admin-index" %}'>Dashboard</a></li>
+                                        <li class="breadcrumb-item active">Category</li>
+                                    </ol>
+                                </div>
+                            </div>
+<!--                            <div class="col-sm-6">-->
+<!--                                <div class="state-information d-none d-sm-block">-->
+<!--                                    <div class="state-graph float-right">-->
+<!--                                        <div id="header-chart-1"></div>-->
+<!--                                        <div class="info">Balance $ 2,317</div>-->
+<!--                                    </div>-->
+<!--                                    <div class="state-graph">-->
+<!--                                        <div id="header-chart-2"></div>-->
+<!--                                        <div class="info">Item Sold 1230</div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                        </div>
+                        <!-- end page title -->
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="topnav">
+                        <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+
+                            <div class="collapse navbar-collapse" id="topnav-menu-content">
+                                <ul class="navbar-nav active">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href='{% url "admin-index" %}'>
+                                            <i class="ti-dashboard"></i>Dashboard
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href='{% url "admin-category" %}'>
+                                            <i class="ti-dashboard"></i>Category
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href='{% url "admin-product" %}'>
+                                            <i class="ti-dashboard"></i>Products
+                                        </a>
+                                    </li>
+
+<!--                                    <li class="nav-item">-->
+<!--                                        <a class="nav-link" href='{% url "admin-home-banner" %}'>-->
+<!--                                            <i class="ti-receipt"></i>Home banner images-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-forms"
+                                           role="button" data-toggle="dropdown" aria-haspopup="true"
+                                           aria-expanded="false">
+                                            <i class="ti-receipt"></i>Banner images
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="topnav-forms">
+                                            <a href='{% url "admin-home-banner" %}' class="dropdown-item">Home</a>
+                                            <a href='{% url "admin-about" %}' class="dropdown-item">About us</a>
+                                        </div>
+                                    </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href='{% url "admin-team" %}'>
+                                        <i class="ti-dashboard"></i>Team Members
+                                    </a>
+                                </li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>Copyright ©2020-2021 Advertising Guru. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="col-sm-11">
+                        <p style="color:red" class="card-title mb-4">Size of Category image should be 480 x 485 px</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-11">
+                                            <h4 class="card-title mb-4">Product Category</h4>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <button type="button" class="btn btn-outline-primary waves-effect waves-light" data-toggle="modal" data-target="#AddCategory">Add</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- sample modal content -->
+                                    <div id="AddCategory" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Add Category" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title mt-0" id="myModalLabel">Add New Category</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                </div>
+                                                <form enctype="multipart/form-data" class="form-horizontal mt-4" method="post" action="{% url 'add_category' %}">
+                                                    {% csrf_token %}
+                                                    <div class="modal-body">
+
+                                                            <div class="form-group">
+                                                                <label for="name">Category Name</label>
+                                                                <input required type="text" name="name" class="form-control" id="name" placeholder="Enter Product Name">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="image">Category Image</label>
+                                                                <input required type="file" accept="image/*" name="image" class="form-control" id="image" placeholder="Select Category Image">
+                                                            </div>
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary waves-effect waves-light">Add Category</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- /.modal -->
+
+                                    <div class="table-responsive">
+                                        <table id="category_table" class="table table-centered table-vertical table-nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th hidden>Id</th>
+                                                    <th>Image</th>
+                                                    <th>Name</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                {% if category %}
+                                                {% for data in category %}
+                                                <tr>
+                                                    <td hidden>{{ data.id }}</td>
+                                                    <td>
+                                                        <img src='/media/{{ data.category_image }}' height="100" />
+                                                    </td>
+                                                    <td>{{ data.category_name }}</td>
+
+                                                    <td>
+                                                        <button type="button" onclick="get_category_data(this);" class="btn btn-outline-primary btn-sm waves-effect waves-light">Edit</button>
+                                                        {% if data.is_active %}
+                                                        <button type="button" onclick="category_status(this);" class="btn btn-success btn-sm waves-effect waves-light">Activate</button>
+                                                        {% else %}
+                                                        <button type="button" onclick="category_status(this);" class="btn btn-danger btn-sm waves-effect waves-light">Deactivate</button>
+                                                        {% endif %}
+                                                        <button type="button" onclick="category_delete(this);" class="btn btn-outline-danger btn-sm waves-effect waves-light">Delete</button>
+                                                    </td>
+                                                </tr>
+                                                {% endfor %}
+                                                {% else %}
+                                                <p style="color:red"> Data not Found!!! </p>
+                                                {% endif %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <div id="UpdateCategory" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Update Category" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" >Update Category</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <form enctype="multipart/form-data" class="form-horizontal mt-4" method="post" action="{% url 'update_category' %}">
+                                    {% csrf_token %}
+                                    <div class="modal-body">
+                                        <input hidden type="text" name="id" class="form-control" id="id">
+                                        <div class="form-group">
+                                            <label for="name1">Category Name</label>
+                                            <input required type="text" name="name" class="form-control" id="name1" placeholder="Enter Product Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="image1">Category Image</label>
+                                            <input type="file" accept="image/*" name="image" class="form-control" id="image1" placeholder="Select Category Image">
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary waves-effect waves-light">Update Category</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
+                </div>
+                <!-- end main content-->
+
+            </div>
+            <!-- END layout-wrapper -->
+
+            <!-- JAVASCRIPT -->
+            <script src='{% static "assets/libs/jquery/jquery.min.js" %}'></script>
+            <script src='{% static "assets/libs/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+            <script src='{% static "assets/libs/metismenu/metisMenu.min.js" %}'></script>
+            <script src='{% static "assets/libs/simplebar/simplebar.min.js" %}'></script>
+            <script src='{% static "assets/libs/node-waves/waves.min.js" %}'></script>
+            <script src='{% static "assets/libs/jquery-sparkline/jquery.sparkline.min.js" %}'></script>
+
+            <!-- App js -->
+            <script src='{% static "assets/js/app.js" %}'></script>
+            <script>
+
+                if( '{{request.session.add}}' == 1 ){
+                    alert("Data Saved Successfully");
+                    $.ajax({
+                        url: '/admin-side/add_session/',
+                    });
+                }
+                if( '{{request.session.update}}' == 1 ){
+                    alert("Data Updated Successfully");
+                    $.ajax({
+                        url: '/admin-side/update_session/',
+                    });
+                }
+                if( '{{request.session.delete_data}}' == 1 ){
+                    alert("Data Deleted Successfully");
+                    $.ajax({
+                        url: '/admin-side/delete_data_session/',
+                    });
+                }
+
+                function get_category_data(ele){
+                    var myTab = document.getElementById('category_table');
+                    row = ele.closest('tr').rowIndex;
+                    data = myTab.rows.item(row).cells;
+                    $.ajax({
+                        url: '/admin-side/get_category_data/',
+                        data: {
+                          'id': data.item(0).innerHTML,
+                        },
+                        dataType: 'json',
+                        success: function (data) {
+                            document.getElementById("id").value = data.data.id;
+                            document.getElementById("name1").value = data.data.name;
+                            $('#UpdateCategory').modal('show');
+
+                        }
+                    });
+                }
+
+                function category_status(ele){
+                    var myTab = document.getElementById('category_table');
+                    row = ele.closest('tr').rowIndex;
+                    data = myTab.rows.item(row).cells;
+                    $.ajax({
+                        url: '/admin-side/category_status/',
+                        data: {
+                          'id': data.item(0).innerHTML,
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            window.location.href = "/admin-side/category/";
+                        }
+                    });
+                }
+                function category_delete(ele){
+                    var myTab = document.getElementById('category_table');
+                    row = ele.closest('tr').rowIndex;
+                    data = myTab.rows.item(row).cells;
+                    $.ajax({
+                        url: '/admin-side/category_delete/',
+                        data: {
+                          'id': data.item(0).innerHTML,
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            window.location.href = "/admin-side/category/";
+                        }
+                    });
+                }
+
+            </script>
+</body>
+
+</html>

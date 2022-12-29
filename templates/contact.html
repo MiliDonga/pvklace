@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact | PVK Lace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include All CSS -->
+
+    <link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/font-awesome.min.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/owl.carousel.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/owl.theme.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/owl.transitions.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/magnific-popup.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/jquery.bxslider.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/settings.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/preset.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/mediaelementplayer.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/animate.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/responsive.css" %}'/>
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href='{% static "assets/images/logo.png"  %}'>
+    <!-- Favicon Icon -->
+
+    <!--[if lt IE 9]>
+    <script src='{% static "js/html5shiv.js" %}'></script>
+    <![endif]-->
+    <style>
+        .menu_btn_logo
+        {
+            position : absolute;
+            top : 0px;
+        }
+        .image_Set
+        {
+            position : relative;
+           bottom : 21px;
+        }
+    </style>
+</head>
+<body>
+<!-- ===================== Loader section ======================= -->
+<div class="loaderWrap">
+    <div id="loader">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- ===================== Navigation section ======================= -->
+<div class="leftMenu overlay-contentpush">
+    <nav class="mainNav">
+        <div class="menuHead">
+            <div class="logoImg">
+                <a href='{% url "index" %}'><img src='{% static "assets/images/logo.png"  %}' alt=""></a>
+            </div>
+            <a href="#" class="crossButton">
+                <img src='{% static "images/close.png" %}' alt="">
+            </a>
+        </div>
+        <div class="mainMenu">
+            <ul>
+                <li class="menu">
+                    <a href='{% url "index" %}'>HOME</a>
+                </li>
+                <li class="menu">
+                    <a href='{% url "about" %}'>ABOUT</a>
+                </li>
+                <li class="menu">
+                    <a href='{% url "artwork" %}'>ART WORK</a>
+                </li>
+                <li class="menu">
+                    <a href='{% url "contact" %}'>CONTACT</a>
+
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</div>
+<!-- ===================== Header section ======================= -->
+<div class="leftEffect">
+    <header class="headerAreaEight">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 text-left">
+                    <div class="logoArea pull-left">
+                        <div class="logoImg pull-left">
+                            <a href='{% url "index" %}'><img src='{% static "assets/images/logo.png"  %}' class="image_Set" alt=""></a>
+                            <a href="#" class="menuBtn pull-left menu_btn_logo" id="leftTrigger">
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="subSocial pull-right">
+                        <div class="searchSubscribe pull-left">
+                            <a class="subscribe" href='{% url "contact" %}'><img src='{% static "images/mail.png" %}'
+                                                                                 alt=""><span>GET INTOUCH</span></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===================== Map section ======================= -->
+    <section class="blogBannerArea two">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <div class="artAbout pull-left">
+                        <h1>Contact<br>Us</h1>
+                        <p>AMAZING<br>SUPPORT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contactMap">
+            <div id="map"></div>
+            <div class="mapOverlay"></div>
+        </div>
+        <div class="fakeDiv"></div>
+        <div class="clearfix"></div>
+    </section>
+    <!-- ===================== Contact info section ======================= -->
+    <section class="contactInfoArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12 noPaddingRight">
+                    <div class="contactDetails wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                        <h5>CONTACT INFOMATION</h5>
+                        <p>Describe Your BUYING Requirement *<br>
+
+                            * Tips on getting accurate quotes. Please include product name, order quantity, usage,
+                            special requests if any in your inquiry.</p>
+                        <address>
+                            <p>48-49 GNARAYAN INDUSTRIAL ESTATE,NEAR TORRENT POWER STATION, ANJANA BRIDGE, DUMBHAL,
+                                SURAT, GUJARAT 395002</p>
+                            <span><a href="tel:+919825262055"> Tel. 098252 62055</a></span>
+                            <span>
+                                <a href = "mailto: info@pvklace.com">Email. info@pvklace.com</a>
+                            </span>
+                        </address>
+
+                    </div>
+                </div>
+                <div class="col-sm-8 col-xs-12">
+                    <div class="mailForm wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                        <h5>get in touch</h5>
+                        <form action='{% url "get_in_touch" %}' method="post" >
+                            {% csrf_token %}
+                            <div class="inputField">
+                                <input required type="text" placeholder="Name" class="required" name="name">
+                                <input required type="email" placeholder="Email" class="required" name="email">
+
+                            </div>
+                            <div style="margin-top: 40px" class="inputField">
+                                <input required type="number" name="phone" placeholder="Phone no.">
+                                <input required type="text" style="margin-right: 20px;" name="subject" placeholder="Subject">
+                            </div>
+                            <textarea required placeholder="Message" name="message" class="required"></textarea>
+                            <button type="submit" class="defaultLink"><span>send</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="clearfix"></div>
+</div>
+<!-- Back To Top -->
+<a id="backtotop" href="#"><img src='{% static "images/backto.png" %}' alt="Back to top"></a>
+
+
+<!-- Include All JS -->
+<script type="text/javascript" src='{% static "js/jquery.js" %}'></script>
+<script type="text/javascript" src='{% static "js/modernizr.custom.js" %}'></script>
+<script type="text/javascript" src='{% static "js/bootstrap.js" %}'></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src='{% static "js/gmaps.js" %}'></script>
+<script type="text/javascript" src='{% static "js/appear.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.magnific-popup.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/mixer.js" %}'></script>
+<script type="text/javascript" src='{% static "js/wow.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/owl.carousel.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.themepunch.tools.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.themepunch.revolution.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/classie.js"%}'></script>
+<script type="text/javascript" src='{% static "js/demo8.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.bxslider.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.shuffle.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/mediaelement-and-player.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/theme.js" %}'></script>
+</body>
+</html>

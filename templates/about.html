@@ -1,0 +1,376 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About | PVK Lace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include All CSS -->
+    <link rel="stylesheet" type="text/css" href='{% static "css/bootstrap.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/font-awesome.min.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/owl.carousel.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/owl.theme.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/owl.transitions.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/magnific-popup.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/jquery.bxslider.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/settings.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/preset.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/animate.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/responsive.css" %}'/>
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href='{% static "assets/images/logo.png"  %}'>
+    <!-- Favicon Icon -->
+
+    <!--[if lt IE 9]>
+    <script src='{% static "js/html5shiv.js" %}'></script>
+    <![endif]-->
+    <style>
+        .menu_btn_logo
+        {
+            position : absolute;
+            top : 0px;
+        }
+        .image_Set
+        {
+            position : relative;
+           bottom : 21px;
+        }
+    </style>
+</head>
+<body>
+<!-- ===================== Loader section ======================= -->
+<div class="loaderWrap">
+    <div id="loader">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- ===================== Navigation section ======================= -->
+<div class="leftMenu overlay-contentpush">
+    <nav class="mainNav">
+        <div class="menuHead">
+            <div class="logoImg">
+                <a href='{% url "index" %}'><img src='{% static "assets/images/logo.png"  %}' alt=""></a>
+                <a href="#" class="crossButton">
+                    <img src='{% static "images/close.png" %}' alt="">
+                </a>
+            </div>
+
+        </div>
+        <div class="mainMenu">
+            <ul>
+                <li class="menu">
+                    <a href='{% url "index" %}'>HOME</a>
+                </li>
+                <li class="menu">
+                    <a href='{% url "about" %}'>ABOUT</a>
+                </li>
+                <li class="menu">
+                    <a href='{% url "artwork" %}'>ART WORK</a>
+                </li>
+                <li class="menu">
+                    <a href='{% url "contact" %}'>CONTACT</a>
+
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</div>
+<!-- ===================== Header section ======================= -->
+    <div class="leftEffect">
+    <header class="headerAreaEight">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 text-left">
+                    <div class="logoArea pull-left">
+                        <div class="logoImg pull-left">
+                            <a href='{% url "index" %}'><img src='{% static "assets/images/logo.png"  %}' class="image_Set" alt=""></a>
+                            <a href="#" class="menuBtn menu_btn_logo pull-left" id="leftTrigger">
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="subSocial pull-right">
+                        <div class="searchSubscribe pull-left">
+                            <a class="subscribe" href='{% url "contact" %}'><img src='{% static "images/mail.png" %}'
+                                                                           alt=""><span>GET INTOUCH</span></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===================== Banner section ======================= -->
+    <section class="aboutBannerArea">
+        <div class="aboutTitle pull-left">
+            <h1>About<br>Us</h1>
+            <p>TRUSTWORTHY &<br>INNOVATIVE</p>
+        </div>
+        <div class="pull-left aboutImg">
+            <img src='/media/{{ banner }}' alt="">
+        </div>
+        <div class="aboutCont pull-left text-left">
+            <h4>OUR MISSION & VISION</h4>
+            <p>
+                We have a great team of experienced members who are always striving to live up to the expectations of
+                our clientele. This is the primary reason that we have gained mammoth growth and success. We have all
+                the permutations and combinations of our products in terms of design, size, pricing.
+
+                We are a destination to source high quality, innovative designed, finely finished laces and feel proud
+                to offer our customers based in America, Africa, Middle East, Europe with superior quality products at
+                competitive prices.
+            </p>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+    <!-- ===================== Overview section ======================= -->
+    <section class="comonSection2 overviewSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                    <h1 class="sectionTitle">PVK LACE Overview</h1>
+                    <p class="sectionSubtitle">PVK LACE</p>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                    <div class="text_box">
+                        <h5>INFRASTRUCTURE</h5>
+                        <p>
+                            PVK Lace has got a gigantic infrastructure to design and develop best products that caters
+                            to people across the globe.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="350ms">
+                    <div class="text_box">
+                        <h5>TIMELINESS</h5>
+                        <p>
+                            We, at PVK Lace understands the importance of timely delivery, and we thrive to achieve to
+                            deliver products at the promised time.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="400ms">
+                    <div class="text_box">
+                        <h5>RESEARCH AND DEVELOPMENT</h5>
+                        <p>
+                            Through our extensive R&D, we try and innovate newer products everyday according to the
+                            recent market trends.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================== Team section ======================= -->
+    <section class="teamArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                    <h1 class="sectionTitle">Who we are</h1>
+                    <p class="sectionSubtitle">OUR TEAM</p>
+                </div>
+            </div>
+            <div class="row wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                <div id="teamCarousel">
+
+                    {% for item in team %}
+                    <div class="col-sm-4">
+                        <div class="teamContent text-left">
+                            <div class="teamImg text-right">
+                                <img src='/media/{{ item.member_image }}' alt="">
+                                <div class="teamHover">
+                                    <ul class="socialIcon">
+                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+                                    <p>
+                                        {{ item.member_name }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================== Funfacts section ======================= -->
+    <section class="funfactsArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms"
+                     data-wow-delay="300ms">
+                    <div class="funFactsCont">
+                        <h1>10000</h1>
+                        <p>Products</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms"
+                     data-wow-delay="350ms">
+                    <div class="funFactsCont">
+                        <h1>5</h1>
+                        <p>Decades and Growing</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms"
+                     data-wow-delay="400ms">
+                    <div class="funFactsCont">
+                        <h1>5</h1>
+                        <p>Continents Covered</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12 text-center wow fadeInUp" data-wow-duration="700ms"
+                     data-wow-delay="450ms">
+                    <div class="funFactsCont">
+                        <h1>5000</h1>
+                        <p>Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================== Feature Slide section ======================= -->
+    <section class="feaSection aboutPage">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div id="featureSlider2">
+
+                    {% for data in slide %}
+                        <div class="f2Item">
+                            <div class="cacaImg">
+                                <img src='/media/{{ data.banner_image }}' alt=""/>
+                            </div>
+                            <div class="cacaDesc">
+                                <h1>
+                                    <a>{{data.text}}
+                                    </a>
+                                </h1>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================== Our Service section ======================= -->
+    <section class="serviceArea">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-7 col-xs-12 wow fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                    <div class="serviceImg">
+                        <img src='{% static "images/about1/service1.jpg" %}' alt="">
+
+                    </div>
+                </div>
+                <div class="col-sm-5 col-xs-12 text-left wow fadeInUp" data-wow-duration="700ms" data-wow-delay="350ms">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                       aria-controls="collapseOne">
+                                        THE MODERN TRENDS
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                 aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <p>
+                                        Innovation is a never ending process. Every day we develop numerous products
+                                        that is useful in various continents. We have a constant eye on the daily needs
+                                        of the customers and the modern concepts that is being used by the fashion
+                                        designers across the globe. We believe in innovating and improving on a daily
+                                        basis to provide the best output for our customers who kept trust on us and our
+                                        products since more than 5 decades.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== Footer section ======================= -->
+    <div class="clearfix"></div>
+    <footer class="footerAreaTwo footer6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 text-left wow fadeInUp" data-wow-duration="700ms"
+                     data-wow-delay="300ms">
+                    <div class="contactInfoTwo">
+                        <div class="logoImg">
+                            <a href='{% url "index" %}'>
+                                <img src='{% static "assets/images/logo.png"  %}' alt="">
+                            </a>
+                        </div>
+                        <address>48-49 GNARAYAN INDUSTRIAL ESTATE,NEAR TORRENT POWER STATION, ANJANA BRIDGE, DUMBHAL,
+                            SURAT, GUJARAT 395002</p>
+                            <span><a href="tel:+919825262055"> Tel. 098252 62055</a></span>
+                            <span>
+                                <a href = "mailto: info@pvklace.com">Email. info@pvklace.com</a>
+                            </span>
+                        </address>
+
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 text-left wow fadeInUp" data-wow-duration="700ms"
+                     data-wow-delay="350ms">
+                    <div class="footerMenuArea">
+                        <h4>USERFUL LINK</h4>
+                        <ul>
+                            <li><a href='{% url "about" %}'>ABOUT US</a></li>
+                            <li><a href='{% url "artwork" %}'>ART WORK</a></li>
+                            <li><a href='{% url "contact" %}'>CONTACT</a></li>
+                            <li><a href=#>360° Experience</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-8 col-xs-12 text-left wow fadeInUp" data-wow-duration="700ms"
+                     data-wow-delay="400ms">
+                    <div class="instaGramArea">
+                        <p class="copyText text-right">© COPYRIGHT 2020. WEBSITE DEVELOP BY <a
+                                href="https://advertising.guru/">ADVERTISING GURU</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- Back To Top -->
+<a id="backtotop" href="#"><img src='{% static "images/backto.png" %}' alt="Back to top"></a>
+
+<!-- Include All JS -->
+<script type="text/javascript" src='{% static "js/jquery.js" %}'></script>
+<script type="text/javascript" src='{% static "js/modernizr.custom.js" %}'></script>
+<script type="text/javascript" src='{% static "js/bootstrap.js" %}'></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src='{% static "js/gmaps.js" %}'></script>
+<script type="text/javascript" src='{% static "js/appear.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.magnific-popup.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/mixer.js" %}'></script>
+<script type="text/javascript" src='{% static "js/wow.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/owl.carousel.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.themepunch.tools.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.themepunch.revolution.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/classie.js" %}'></script>
+<script type="text/javascript" src='{% static "js/demo8.js" %}'></script>
+<script type="text/javascript" src='{% static "js/jquery.bxslider.min.js" %}'></script>
+<script type="text/javascript" src='{% static "js/bootstrapProgress.js" %}'></script>
+<script type="text/javascript" src='{% static "js/theme.js" %}'></script>
+</body>
+</html>
